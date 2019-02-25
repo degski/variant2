@@ -7,7 +7,7 @@
 
 #### Run time
 
-    NN=50000000:
+    N=50000000:
             double:   1020 ms; S=1.78571e+14
           variant2:   1791 ms; S=1.78571e+14
       std::variant:   2531 ms; S=1.78571e+14
