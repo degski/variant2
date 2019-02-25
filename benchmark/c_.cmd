@@ -1,0 +1,2 @@
+clang-cl -m64 -fuse-ld=lld -flto=thin  /D "NDEBUG" /D "_CONSOLE" /D "NOMINMAX" /D "_UNICODE" /D "UNICODE" -Xclang -fcxx-exceptions -Xclang -std=c++17 -Qunused-arguments -Xclang -ffast-math -Xclang -ffunction-sections -Xclang -Wno-deprecated-declarations -Xclang -Wno-unknown-pragmas -Xclang -Wno-ignored-pragmas -mmmx  -msse  -msse2 -msse3 -mssse3 -msse4.1 -msse4.2 -mavx -mavx2  -Xclang -Wno-unused-variable -Xclang -Wno-language-extension-token -I"y:\vcpkg\installed\x64-windows-static\include" -I"..\include" -Ox -Oi -MT benchmark1.cpp
+

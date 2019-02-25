@@ -1,16 +1,28 @@
+
+# define NO_BV
+
 #if defined(ONLY_V2)
 # define NO_BV
 # define NO_SV
+# define NO_MP
 #endif
 
 #if defined(ONLY_BV)
 # define NO_V2
 # define NO_SV
+# define NO_MP
 #endif
 
 #if defined(ONLY_SV)
 # define NO_V2
 # define NO_BV
+# define NO_MP
+#endif
+
+#if defined(ONLY_MP)
+# define NO_V2
+# define NO_BV
+# define NO_SV
 #endif
 
 #if !defined(NO_V2)
@@ -23,6 +35,10 @@
 
 #if !defined(NO_SV)
 #include <variant>
+#endif
+
+#if !defined(NO_MP)
+#include <mpark/variant.hpp>
 #endif
 
 #include <type_traits>
@@ -99,6 +115,22 @@ template<class... T> double to_double( std::variant<T...> const& v )
 
 #endif
 
+
+#if !defined(NO_MP)
+
+template<class... T> mpark::variant<T...> operator+( mpark::variant<T...> const& v1, mpark::variant<T...> const& v2 )
+{
+    return visit( [&]( auto const& x1, auto const & x2 ) -> mpark::variant<T...> { return add( x1, x2 ); }, v1, v2 );
+}
+
+template<class... T> double to_double( mpark::variant<T...> const& v )
+{
+    return std::get<double>( v );
+}
+
+#endif
+
+
 template<class V> void test_( long long N )
 {
     std::vector<V> w;
@@ -148,13 +180,16 @@ template<class... T> void test( long long N )
 #if !defined(NO_SV)
     std::cout << "  std::variant: "; test_<std::variant<T...>>( N );
 #endif
+#if !defined(NO_MP)
+    std::cout << "mpark::variant: "; test_<std::variant<T...>>( N );
+#endif
 
     std::cout << '\n';
 }
 
 int main()
 {
-    long long const N = 100'000'000LL;
+    long long const N = 50'000'000LL;
 
     test<long long, double>( N );
     test<std::nullptr_t, long long, double, std::string, std::vector<std::string>, std::map<std::string, std::string>>( N );
