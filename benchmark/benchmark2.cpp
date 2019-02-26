@@ -5,8 +5,6 @@
 // See accompanying file LICENSE_1_0.txt or copy at
 // http://www.boost.org/LICENSE_1_0.txt
 
-# define NO_BV
-
 #if defined(ONLY_V2)
 # define NO_BV
 # define NO_SV

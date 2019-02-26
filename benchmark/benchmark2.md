@@ -8,11 +8,11 @@
 #### Run time
 
     N=50000000:
-            prefix:    577 ms; S=104166608333340
-          variant2:   1381 ms; S=104166608333340
-      std::variant:   1513 ms; S=104166608333340
-    mpark::variant:   1519 ms; S=104166608333340
-
+            prefix:    659 ms; S=104166608333340
+          variant2:   1523 ms; S=104166608333340
+    boost::variant:   1737 ms; S=104166608333340
+      std::variant:   1546 ms; S=104166608333340
+    mpark::variant:   1555 ms; S=104166608333340
 
 
 ## VS 2017 15.9.7 64 bit (cl.exe 19.16, /std:c++17)
@@ -21,8 +21,9 @@
 
 #### Run time
 
-    N=50000000:
-            prefix:    540 ms; S=104166608333340
-          variant2:   1406 ms; S=104166608333340
-      std::variant:   1464 ms; S=104166608333340
-    mpark::variant:   1552 ms; S=104166608333340
+    N=50000000
+            prefix:    595 ms; S=104166608333340
+          variant2:   1515 ms; S=104166608333340
+    boost::variant:   2272 ms; S=104166608333340
+      std::variant:   1612 ms; S=104166608333340
+    mpark::variant:   1670 ms; S=104166608333340

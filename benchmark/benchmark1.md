@@ -8,17 +8,18 @@
 #### Run time
 
     N=50000000:
-            double:   1011 ms; S=1.78571e+14
-          variant2:   1827 ms; S=1.78571e+14
-      std::variant:   2671 ms; S=1.78571e+14
-    mpark::variant:   2658 ms; S=1.78571e+14
+            double:   1069 ms; S=1.78571e+14
+          variant2:   1917 ms; S=1.78571e+14
+    boost::variant:   2514 ms; S=1.78571e+14
+      std::variant:   2986 ms; S=1.78571e+14
+    mpark::variant:   3105 ms; S=1.78571e+14
 
     N=50000000:
-            double:   1027 ms; S=1.78571e+14
-          variant2:   6885 ms; S=1.78571e+14
-      std::variant:   6307 ms; S=1.78571e+14
-    mpark::variant:   6549 ms; S=1.78571e+14
-
+            double:   1218 ms; S=1.78571e+14
+          variant2:   8245 ms; S=1.78571e+14
+    boost::variant:   7009 ms; S=1.78571e+14
+      std::variant:   7473 ms; S=1.78571e+14
+    mpark::variant:   7659 ms; S=1.78571e+14
 
 
 ## VS 2017 15.9.7 64 bit (cl.exe 19.16, /std:c++17)
@@ -28,13 +29,15 @@
 #### Run time
 
     N=50000000:
-            double:   1017 ms; S=1.78571e+14
-          variant2:   2933 ms; S=1.78571e+14
-      std::variant:   3143 ms; S=1.78571e+14
-    mpark::variant:   3261 ms; S=1.78571e+14
+            double:   1097 ms; S=1.78571e+14
+          variant2:   3110 ms; S=1.78571e+14
+    boost::variant:   5233 ms; S=1.78571e+14
+      std::variant:   3261 ms; S=1.78571e+14
+    mpark::variant:   3454 ms; S=1.78571e+14
 
     N=50000000:
-            double:   1037 ms; S=1.78571e+14
-          variant2:   6896 ms; S=1.78571e+14
-      std::variant:   6836 ms; S=1.78571e+14
-    mpark::variant:   7495 ms; S=1.78571e+14
+            double:   1214 ms; S=1.78571e+14
+          variant2:   7938 ms; S=1.78571e+14
+    boost::variant:   8574 ms; S=1.78571e+14
+      std::variant:   7487 ms; S=1.78571e+14
+    mpark::variant:   8284 ms; S=1.78571e+14

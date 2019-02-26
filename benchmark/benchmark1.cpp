@@ -1,6 +1,4 @@
 
-# define NO_BV
-
 #if defined(ONLY_V2)
 # define NO_BV
 # define NO_SV
