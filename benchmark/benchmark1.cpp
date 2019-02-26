@@ -125,7 +125,7 @@ template<class... T> mpark::variant<T...> operator+( mpark::variant<T...> const&
 
 template<class... T> double to_double( mpark::variant<T...> const& v )
 {
-    return std::get<double>( v );
+    return mpark::get<double>( v );
 }
 
 #endif
@@ -181,7 +181,7 @@ template<class... T> void test( long long N )
     std::cout << "  std::variant: "; test_<std::variant<T...>>( N );
 #endif
 #if !defined(NO_MP)
-    std::cout << "mpark::variant: "; test_<std::variant<T...>>( N );
+    std::cout << "mpark::variant: "; test_<mpark::variant<T...>>( N );
 #endif
 
     std::cout << '\n';

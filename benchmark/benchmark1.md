@@ -8,16 +8,16 @@
 #### Run time
 
     N=50000000:
-            double:   1020 ms; S=1.78571e+14
-          variant2:   1791 ms; S=1.78571e+14
-      std::variant:   2531 ms; S=1.78571e+14
-    mpark::variant:   2525 ms; S=1.78571e+14
+            double:   1011 ms; S=1.78571e+14
+          variant2:   1827 ms; S=1.78571e+14
+      std::variant:   2671 ms; S=1.78571e+14
+    mpark::variant:   2658 ms; S=1.78571e+14
 
     N=50000000:
-            double:   1025 ms; S=1.78571e+14
-          variant2:   6873 ms; S=1.78571e+14
-      std::variant:   6239 ms; S=1.78571e+14
-    mpark::variant:   6244 ms; S=1.78571e+14
+            double:   1027 ms; S=1.78571e+14
+          variant2:   6885 ms; S=1.78571e+14
+      std::variant:   6307 ms; S=1.78571e+14
+    mpark::variant:   6549 ms; S=1.78571e+14
 
 
 
@@ -28,13 +28,13 @@
 #### Run time
 
     N=50000000:
-            double:   1054 ms; S=1.78571e+14
-          variant2:   2990 ms; S=1.78571e+14
-      std::variant:   3147 ms; S=1.78571e+14
-    mpark::variant:   3169 ms; S=1.78571e+14
+            double:   1017 ms; S=1.78571e+14
+          variant2:   2933 ms; S=1.78571e+14
+      std::variant:   3143 ms; S=1.78571e+14
+    mpark::variant:   3261 ms; S=1.78571e+14
 
     N=50000000:
-            double:   1072 ms; S=1.78571e+14
-          variant2:   6593 ms; S=1.78571e+14
-      std::variant:   6841 ms; S=1.78571e+14
-    mpark::variant:   6835 ms; S=1.78571e+14
+            double:   1037 ms; S=1.78571e+14
+          variant2:   6896 ms; S=1.78571e+14
+      std::variant:   6836 ms; S=1.78571e+14
+    mpark::variant:   7495 ms; S=1.78571e+14
